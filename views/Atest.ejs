@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tests</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+</head>
+<style type="text/css">
+    body {
+   background:url('cou.jpg') no-repeat;
+   background-size:100% 110%;
+   max-height:1000%;
+   max-width:100%;
+}
+h1
+{
+    color:black;
+    font-family:Courier;
+    margin-left:2%;
+}
+.l1{
+    margin-top:2%;
+    color:white;
+    
+}
+.form1 {
+    width: 380px;
+    background-color:rgba(0,0,0,0.8);
+    margin-left:35%;
+    padding-left:3%;
+    width:30%;
+    margin-top:3%;
+    border-radius:12px;
+    color:white;
+    height:125%;
+    padding-bottom:1%
+
+}
+.h4 {
+    font-size: 20px;
+    margin-left: 5px;
+    font-weight: 600;
+}
+.form-control
+{
+  width:230px;
+  font-size:13px;
+  border:none;
+}
+.blue
+{
+    
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    width:250px 
+}
+
+ *:focus {
+    outline: 0 !important;
+}
+
+.orange
+{
+    color:white;
+    margin-top:4%;
+    text-decoration:none;
+    border-radius:15px;
+    background-color:#ff751a;
+    
+
+
+}
+.d1
+{
+  background-color:#ff751a;
+  height:50px
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+
+</style>
+<body>
+<div style="" class="d1">
+    <label style="" class="k2">Tests</label>
+
+</div>
+     <form method="get" class="form1">
+        <div class="form-group" style="">
+         <label for="tname" class="l1" >Test name:</label>
+         <input type="text" class="form-control" name="tname" placeholder="Ex:T1"  
+         pattern="^(T)[1-9]{1}$" title="Format: T & 1 digit">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="testid" class="l1" >Test Id:</label>
+         <input type="text" class="form-control" name="testid" placeholder="Ex:U4CSET1"  
+         pattern="^(U4)(CSE|ECE|EEE|MEC)(T)[1-9]{1}$" title="Format: (U4) (CSE|ECE|MEC|EEE) T & 1 digit" > 
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="cid" class="l1" >Course ID:</label>
+         <input type="text" class="form-control" name="cid" placeholder="Enter Course Name">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="toid" class="l1" >Teacher ID:</label>
+         <input type="text" class="form-control" name="toid" placeholder="Enter Teacher ID">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="tmarks[]" class="l1" >Test Marks:</label><br>
+         <input type="text" name="tmarks[]" value="" placeholder="after log in" readonly="">
+         
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="areg[]" class="l1" >Registered students:</label><br>
+         <input type="text" name="areg[]" value="" placeholder="after log in" readonly="">
+         
+        </div>
+
+        <br>
+
+        <br>
+    <div style="margin-left:5%">
+    <button type="submit" class="btn blue" formaction="/test-store" value="Add">Add</button>
+    </div>
+     
+    </form>
+  	
+    
+			
+			
+	
+</body>
+
+</html>

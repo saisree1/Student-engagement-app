@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../dbase.css">
+</head>
+<style type="text/css">
+
+
+.l1{
+  margin-top:2%;
+  color:white;
+  
+}
+.form1 {
+    width: 380px;
+  margin-left:30px;
+    padding-left:3%;
+  width:30%;
+  border-radius:12px;
+  color:black;
+  height:50%;
+}
+.form-control
+{
+  width:230px;
+  font-size:13px;
+}
+.b1:hover
+{
+  color:white;
+  text-decoration:underline;
+
+}
+.b2:hover
+{
+  color:white;
+  text-decoration:underline;
+
+}
+.blue
+{
+	
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    width:250px 
+}
+.d1
+{
+  background-color:#ff751a;
+  height:50px
+}
+.b1
+{
+  background:transparent;
+  border:none;
+  color:white;
+
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+.b2
+{
+	margin-left:75%;
+  background:transparent;
+  border:none;
+  color:white;
+}
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+</style>
+	<script>
+function myFunction() {
+    function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+<body style="background:url('../5.jpg');background-size:cover;background-position:0px 800px ">
+<div style="" class="d1">
+<label style="" class="k2">Personal Information</label>
+<form style="margin-top:-3%;font-size:20px" method="get">
+     <button style="" class="b2" formaction="/tupload/<%=JSON.parse(JSON.stringify(res1[0].temail))%>">Upload</button>
+     </form>
+
+
+</div>
+
+     <form method="get" style="background-color:rgba(0,0,0,0.5);width:25%;margin-left:65%;padding-left:3%;margin-top:3%;height: 65%">
+ <div class="form-group" style="">
+         <label for="tname" class="l1" >Name:</label>
+         <input type="text" class="form-control" name="tname" placeholder="<%=JSON.parse(JSON.stringify(res1[0].tname))%>" pattern="[a-zA-Z]+$" title="Format:only letters"  readonly="readonly">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="tid" class="l1" >Reg No:</label>
+         <input type="title" class="form-control" name="tid" value="<%=JSON.parse(JSON.stringify(res1[0]._id))%>" 
+         pattern="^(BL\.EN\.U4)(CSE|ECE|EEE|MEC)[1-9][0-9]{4}$" title="Not editable" readonly="readonly" > 
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="tdate" class="l1" >Date Of Birth:</label>
+         <input type="text" class="form-control" name="tdate" 
+         placeholder="<%=JSON.parse(JSON.stringify(res1[0].tdate))%>" readonly="readonly">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="temail" class="l1" >Email:</label>
+         <input type="email" class="form-control" name="temail" placeholder="<%=JSON.parse(JSON.stringify(res1[0].temail))%>"  readonly="readonly">
+        </div>
+       
+        <div class="form-group" style="margin-top:-10px">
+         <label for="tPhone no" class="l1">Phone no:</label>
+         <input type="text" class="form-control" name="tphno" pattern="[1-9][0-9]{9}$" placeholder="<%=JSON.parse(JSON.stringify(res1[0].tPhone))%>"  readonly="readonly">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="ID Proof" class="l1">ID Proof:</label>
+         <input type="text" class="form-control" name="tidprf" value="<%=JSON.parse(JSON.stringify(res1[0].tfile))%>" 
+         readonly="readonly">
+        </div>
+</form>
+<h6 style="margin-left:65%">*Upload id proof to update details</h6>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{"_id":"15CSE101","tid":"U4CSE100","cname":"operating systems","days":["Monday","Tuesday","Thursday"],"Branch":"CSE","stu_no":"0"}
+{"_id":"15CSE128","tid":"U4CSE123","cname":"Object oriented","days":["Monday","Thursday","Friday"],"Branch":"CSE","stu_no":"0"}
+{"_id":"15CSE202","tid":"U4CSE105","cname":"coa","days":["Monday","Tuesday","Wednesday","Thursday","Friday"],"Branch":"CSE","stu_no":"0"}
+{"_id":"15ECE124","tid":"U4EEE125","cname":"Transistors","days":["Monday","Wednesday","Thursday","Friday"],"Branch":"ECE","stu_no":"0"}
+{"_id":"15EEE124","tid":"U4ECE125","cname":"Solids","days":["Tuesday","Wednesday","Thursday"],"Branch":"EEE","stu_no":"0"}
+{"_id":"15MEC124","tid":"U4MEC125","cname":"CAD","days":["Monday","Wednesday","Friday"],"Branch":"MEC","stu_no":"0"}

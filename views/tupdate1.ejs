@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Your Details</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../dbase.css">
+
+</head>
+<style type="text/css">
+
+.l1{
+  margin-top:2%;
+  color:black;
+  
+}
+.form1 {
+    width: 380px;
+  margin-left:30px;
+    padding-left:3%;
+  width:30%;
+  border-radius:12px;
+  color:black;
+  height:50%;
+}
+.form-control
+{
+  width:230px;
+  font-size:13px;
+}
+.b1:hover
+{
+  color:white;
+  text-decoration:underline;
+
+}
+.b2:hover
+{
+  color:white;
+  text-decoration:underline;
+
+}
+.blue
+{
+	
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    width:250px 
+}
+.d1
+{
+  background-color:#ff751a;
+  height:50px
+}
+.b1
+{
+  background:transparent;
+  border:none;
+  color:white;
+
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+.b2
+{
+	margin-left:75%;
+  background:transparent;
+  border:none;
+  color:white;
+}
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+</style>
+	<script>
+function myFunction() {
+    function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+<body style="background:url('../5.jpg');background-size:cover;background-position:0px 800px ">
+<div style="" class="d1">
+<label style="" class="k2">Update Your Details</label>
+
+<form style="margin-top:-3%;font-size:20px;width:20px;margin-left:85%">
+     <button style="" class="b1" formaction="/tlogi">Logout</button>
+     </form>
+     
+   
+
+</div>
+
+<h5 style="color:black;margin-left:55%">=>U can update only *</h5>
+     <form method="get" style="background-color:rgba(0,0,0,0.5);width:25%;margin-left:55%;padding-left:3%;margin-top:%">
+ <div class="form-group" style="">
+         <label for="Name" class="l1" >Name*:</label>
+         <input type="text" class="form-control" name="name" value="<%=JSON.parse(JSON.stringify(res1[0].tname))%>" pattern="[a-zA-Z]+$" title="Format:only letters">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Reg No" class="l1" >Teacher ID:</label>
+         <input type="title" class="form-control" name="reg" value="<%=JSON.parse(JSON.stringify(res1[0]._id))%>"  pattern="^(BL\.EN\.U4)(CSE|ECE|EEE|MEC)[1-9][0-9]{4}$" title="Not editable" readonly="readonly"> 
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="date" class="l1" >Date Of Birth*:</label>
+         <input type="date" class="form-control" name="date" 
+         placeholder="<%=JSON.parse(JSON.stringify(res1[0].tdate))%>" min="1980-01-01" max="1992-12-31" required>
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="email" class="l1" >Email*:</label>
+         <input type="email" class="form-control" name="email" value="<%=JSON.parse(JSON.stringify(res1[0].temail))%>">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label class="l1" > Password*:</label>
+         <input type="password" class="form-control" name="pwd" pattern="^[A-Z][a-z]+[0-9]*$" title="Format:Start with capital and use atleast one small letter and any no.of digits" value="<%=JSON.parse(JSON.stringify(res1[0].tpassword))%>">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Phone no" class="l1">Phone no*:</label>
+         <input type="text" class="form-control" name="phno" pattern="[1-9][0-9]{9}$" value="<%=JSON.parse(JSON.stringify(res1[0].tPhone))%>">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+        <label for="cou" class="l1" >Branch:</label><br>
+        <input type="text" class="form-control" name="cou" value="<%=JSON.parse(JSON.stringify(res1[0].tbranch))%>" readonly="">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Phone no" class="l1">ID Proof:</label>
+         <input type="text" class="form-control" name="idprf" value="<%=JSON.parse(JSON.stringify(res1[0].tfile))%>" 
+         readonly="readonly">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="gender" class="l1">Gender*:</label>
+         
+         <label class="l1" style="margin-left:5%"><input type="radio" name="gender" value="male" > male  </label>
+         <label class="l1" style="margin-left:7%"><input type="radio" name="gender" value="female"> female</label>
+        </div>
+        <div style="margin-top:">
+    <button type="submit" class="btn blue" formaction="/tupdate" value="Sign up">Update</button>
+    </div>
+
+</form>
+</body>
+</html>

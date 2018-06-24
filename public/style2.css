@@ -1,0 +1,79 @@
+body {
+background:url('2.jpg') no-repeat;
+background-size:100% 180%;
+max-height:200%;
+max-width:100%;
+}
+h1
+{
+	color:white;
+	font-family:Courier;
+	margin-left:21%;
+}
+.login {
+	
+}
+.l1{
+	margin-top:2%;
+	color:white;
+	margin-right:80%;
+}
+.form1 {
+width: 380px;
+margin-top:50px;
+	margin-left:30px;
+    padding-left:3%;
+	width:30%;
+	color:black;
+	height:20%;
+	border-radius: 10px;
+    text-align: center;
+
+}
+.h4 {
+	font-size: 20px;
+	margin-left: 5px;
+	font-weight: 600;
+}
+.form-control
+{
+  width:230px;
+  font-size:13px;
+  border:none;
+}
+
+
+.blue
+{
+	
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    margin-left:-22%;
+    width:250px 
+}
+.blue:hover{
+	cursor:pointer;
+
+}
+.orange:hover{
+	cursor:pointer;
+
+}
+ *:focus {
+    outline: 0 !important;
+}
+.orange
+{
+	color:orange;
+
+	background:transparent;
+	margin-top:-22%;
+	font-size:15px;
+	font-weight:bold;
+	border-radius:15px;
+	
+}
+

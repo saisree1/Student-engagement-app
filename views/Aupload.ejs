@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+	<style type="text/css">
+  
+.d1
+{
+  background-color:#ff751a;
+  height:50px;
+
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+.orange
+{
+  
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    width:150px 
+}
+.b1
+{
+  background:transparent;
+  border:none;
+  color:white;
+
+}
+	</style>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  function valid()
+{ alert("Assignment uploaded successfully..")}
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>  
+</head>
+<body style="">
+<div style="" class="d1">
+<label style="" class="k2">Upload Assignments</label>
+</div>
+
+<form style="margin-top:-3.5%;font-size:20px;width:20px;margin-left:85%;" method="get">
+     <button style="" class="b1" formaction=""></button>
+     </form>
+     <div class="row">
+     <% var found = false %>
+          <% var found1 = false %>
+
+    <%for(j=0;j<result[0].courses.length;j++){%>
+           <% if(stu[0]._id!=result[0].courses[j]){%>
+           
+          <%}else if(stu[0]._id==result[0].courses[j]){%>
+              
+              <%found=true%>
+              <%break%>  
+          <%}%>
+    <%}%>
+    
+
+    <%if(found){%>
+
+   
+               <%for(i=0;i<res2.length;i++){%>
+               <%for(k=0;k<res2[i].areg.length;k++){%>
+              <%for(j=0;j<res2[i].areg.length;j++){%>
+
+              <%if(res2[i].areg[j+1]==result[0]._id){%>
+              <%found1=true%>
+              <%break%>
+              <%}else{%>
+              <%found1=false%>
+                          
+              <%}%>
+               <%}%>
+               <%if(found1){%>
+                <div style="margin-top: 5%;margin-left:45%;">
+              <form method="POST" action=""  enctype="multipart/form-data"  onSubmit="return valid();"><label style="font-size:20px;">Assignment---></label><%=res2[i]._id%>
+               <br>
+               uploaded
+              </div>
+              <%break%>
+
+               <%}else{%>
+              
+ <div style="margin-top: 5%;margin-left:45%;">
+              <form method="POST" action=""  enctype="multipart/form-data"  onSubmit="return valid();"><label style="font-size:20px;">Assignment---></label><%=res2[i]._id%>
+               <br>
+<label style="font-size:20px;">File:</label><input type="file" name="doc" style="margin-left:10%;margin-top:-23%"  >
+
+<br/><button type="submit" value="Upload" class="btn orange" formaction="/aupload/<%=res2[i]._id%>/<%=result[0]._id%>" style="margin-left:17%;margin-top:10%">Upload</button>
+<br/>
+  <h7 style="margin-left:7%">msg: <%= typeof msg != 'undefined' ? msg : '' %></h7>
+  <br>
+  </div>
+              <%break%>
+
+               <%}%>
+ <%}%>
+              <%}%>
+    <%}else{%>
+                  <h5 style="color:red">*U didn't join this course</h5>
+
+    <%}%>
+                   
+
+</form>
+</body>
+</html>

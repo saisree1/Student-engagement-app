@@ -1,0 +1,4 @@
+{"name":"Raju","_id":"BL.EN.U4CSE15001","date":"1998-12-10","email":"Raju@gmail.com","password":"Raju1234","Phone":"9534953462","courses":[""],"branch":"CSE","gender":"male","file":"myImage-1522939942344.jpg"}
+{"name":"manideepu","_id":"BL.EN.U4CSE15076","date":"1998-10-12","email":"deepusri684@gmail.com","password":"Munnangi98","Phone":"7981209299","courses":["","15CSE101","15CSE128"],"branch":"CSE","gender":"male","file":""}
+{"name":"sree","_id":"BL.EN.U4CSE15082","date":"1998-08-03","email":"nssn114@gmail.com","password":"Sree5678","Phone":"9494039584","courses":["","15CSE101","15CSE128","15CSE202"],"branch":"CSE","gender":"male","file":"myImage-1522940248835.jpg"}
+{"name":"ramu","_id":"BL.EN.U4MEC15082","date":"1998-08-03","email":"ramu@gmail.com","password":"Ramu5678","Phone":"9494039582","courses":["","15MEC124"],"branch":"MEC","gender":"male","file":""}

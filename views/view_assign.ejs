@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<title>Student Engament App</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="">
+    
+     
+           *:focus {
+    outline: 0 !important;
+}
+.b1:hover
+{
+  color:white;
+  text-decoration:underline;
+}
+.a1:hover
+{
+  color:white;
+}
+.c1:hover
+{
+  color:white;
+  text-decoration:underline;
+}
+.b1
+{
+  margin-left:75%;
+  background:transparent;
+  border:none;
+}
+.blue
+{
+  
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    width:10%
+}
+.a1
+{
+  text-decoration:none;
+  color:black
+}
+.col-md-4
+{
+  border-style:solid;
+  margin-left:10px;
+  margin-top:20px;
+  border-color:gray;
+  background-color:rgba(255,255,0,0.3);
+}
+.d1
+{
+  background-color:#ff751a;
+  height:50px
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+.c1
+{
+   background:transparent;
+  border:none;
+}
+    </style>
+    
+
+</head>
+<body>
+<div style="" class="d1">
+ <label style="" class="k2">Assignments</label>
+  <form style="margin-top:-3%;font-size:20px">
+     <button style="" class="b1" formaction="/assign/<%=res2[0].temail%>">Add/remove</button>|
+      <button class="c1" formaction="/thome/<%=res2[0].temail%>">home</button> |
+      <a href="/tlogin" class="a1" style="">Log out</a>   
+
+               </form>
+     	 </div>
+<label style="color: red;font-weight:bold">*Marks should be filled in order</label>
+<br>
+<label style="color: red;font-weight:bold">*Use this to download file ->copy link address of file and paste as url in new window</label>
+ <%var found=false%>
+      <% for(var i=0;i<res3.length;i++){%>
+        
+
+          <% if(res2[0]._id==res3[i].tid){%>
+             <%found=true%>
+             <% if(found){%>  
+             <form style="margin-top:2%">
+               <label style="font-weight:bold"> Assignment Name:</label><%=res3[i].aname%>
+             <br>
+             <label style="font-weight:bold">  Date of submission:</label><%=res3[i].adate%> <br/>
+             <label style="font-weight:bold">ID:</label><%=res3[i]._id%> <br>
+              <% for(var j=1;j<res3[i].areg.length;j++){%>
+
+              <label style="font-weight:bold">Submissions:</label><%=res3[i].areg[j]%>--><a href="<%=path%>\public\uploads\Auploads\<%=res3[i].file[j]%>" download><%=res3[i].file[j]%></a> <br> 
+              <% if(res3[i].agrade[j]==undefined){%>  
+              <label style="font-weight:bold">Grade:</label><%=res3[i].areg[j]%>-><input type="text" pattern="[A-C]{1}" name="agrade">
+              <form><button type="submit" formaction="/teacher/marks_submit/<%=res3[i]._id%>/<%=res3[i].areg[j]%>/<%[j]%>" class="btn blue">Submit</button></form>
+              <% }else{ %> 
+               <label style="font-weight:bold">Grade:</label><%=res3[i].areg[j]%>--><input type="text" pattern="[A-C]{1}" name="agrade" value="<%=res3[i].agrade[j]%>" disabled><br>
+                      <% } %> 
+              <% } %> 
+              </form>
+              -------------------------------------------------------------------------------------------------
+          <%}else{%>
+              
+               
+               <%}%>
+          <%}else{%>
+              
+               
+               <%}%>
+        
+              <% } %> 
+               
+
+</body>
+</html>

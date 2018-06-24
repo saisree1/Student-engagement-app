@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Student Engament App</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="">
+    
+     
+           *:focus {
+    outline: 0 !important;
+}
+.b1:hover
+{
+  color:white;
+  text-decoration:underline;
+}
+.a1:hover
+{
+  color:white;
+}
+.c1:hover
+{
+  color:white;
+  text-decoration:underline;
+}
+.b1
+{
+  margin-left:65%;
+  background:transparent;
+  border:none;
+}
+.a1
+{
+  text-decoration:none;
+  color:black
+}
+.col-md-4
+{
+  border-style:solid;
+  margin-left:10px;
+  margin-top:20px;
+  border-color:gray;
+  background-color:rgba(255,255,0,0.3);
+}
+.orange
+{
+  
+    font-size: 14px;
+    color:white;
+    border-color:#ff751a;
+    background-color:#ff751a;
+    border-radius:11px;
+    width:150px 
+}
+.d1
+{
+  background-color:#ff751a;
+  height:50px
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+.c1
+{
+   background:transparent;
+  border:none;
+}
+    </style>
+    
+
+</head>
+<body>
+<div style="" class="d1">
+ <label style="" class="k2">Student Engagement Application</label>
+  
+       </div>
+
+
+      <% for(var i=0;i<stu.length ;i++){%>
+      <div class="" style="">
+
+       <div class="row" style=""> 
+
+        <div class="col-md-4" style="">
+      <% for(var j=0;j<stu[i].areg.length;j++){%>
+        <h4><%=stu[i].Tname%></h4>   
+        <%=stu[i].tid%>
+       
+         </div>
+         </div>
+         </div>
+      <% for(var k=0;k<res.length;k++){%>
+      <% for(var l=0;l<res[k].courses.length;l++){%>
+      <%if(stu[i].cid==res[k].courses[l]){%>
+      <%if(stu[i].areg[j]=='NULL'){%>
+         
+          <form>
+       <div class="row" style=""> 
+                <div class="col-md-4" style="">   
+      <label>Reg.no:--></label><input type="text" style="width:45%;margin-top:1%" name="areg" value="<%=res[k]._id%>" readonly><br>
+                        
+        <label>Marks:--></label><input type="text" style="width:15%;margin-top:1%" pattern="[0-9]{2}" 
+        name="tmarks" value="">
+
+        <button class="btn orange" value="submit" formaction="/add_test/<%=stu[i].Tname%>">Submit</button>
+        </form>  
+         </div>
+         </div>
+
+      <%}else{%>
+            
+            <form>
+       <div class="row" style=""> 
+                <div class="col-md-4" style="">   
+      <label>Reg.no:--></label><input type="text" style="width:45%;margin-top:1%" name="areg" value="<%=stu[i].areg[j]%>" disabled><br>
+                        
+        <label>Marks:--></label><input type="text" style="width:15%;margin-top:1%" pattern="[0-9]{2}" 
+        name="tmarks" value="<%=stu[i].tmarks[j]%>" disabled="">
+        </form>  
+         </div>
+         </div> 
+               
+
+
+
+      <%}%>
+
+
+     
+         
+         <%}else{%>
+
+
+         <% } %>
+              <% } %> 
+              <% } %> 
+              <% } %>
+
+              <% } %>
+      
+                
+           
+          
+ 
+</body>
+</html>

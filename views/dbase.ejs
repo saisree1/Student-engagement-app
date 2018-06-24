@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<title>Student Engament App</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="">
+    
+     
+           *:focus {
+    outline: 0 !important;
+}
+.b1:hover
+{
+  color:white;
+  text-decoration:underline;
+}
+.a1:hover
+{
+  color:white;
+}
+.c1:hover
+{
+  color:white;
+  text-decoration:underline;
+}
+.b1
+{
+  margin-left:65%;
+  background:transparent;
+  border:none;
+}
+.a1
+{
+  text-decoration:none;
+  color:black
+}
+.col-md-4
+{
+  border-style:solid;
+  margin-left:10px;
+  margin-top:20px;
+  border-color:gray;
+  background-color:rgba(255,255,0,0.3);
+}
+.d1
+{
+  background-color:#ff751a;
+  height:50px
+}
+.k2
+{
+  color:white;
+  margin-left:3%;
+  font-size:25px
+}
+.c1
+{
+   background:transparent;
+  border:none;
+}
+    </style>
+    
+
+</head>
+<body>
+<div style="" class="d1">
+ <label style="" class="k2">Student Engagement Application</label>
+  <form style="margin-top:-3%;font-size:20px">
+     <button style="" class="b1" formaction="/Update/<%=email%>">Profile</button>|
+      <button class="c1" formaction="/scourse/<%=email%>">Courses</button> |
+      <a href="/login" class="a1" style="">Log out</a>   
+
+               </form>
+     	 </div>
+<img src="4.jpg" style="opacity:0.25;z-index:-1">
+
+<div class="container" style="margin-top:-45%;margin-left:45%;width:860px">
+<h1 style=""> My Classmates </h1> 
+      <% for(var i=0;i<ab.length;i++){%>
+         
+            <%if(ab[i].branch==k.branch){%>
+              <h4><%=ab[i].name%></h4>
+               Email:<%=ab[i].email%> <br/>Reg.no:<%=ab[i]._id%> <br>
+               <br>
+              <%}else{%>
+              
+               <%}%>
+                
+                             <% } %> 
+
+               
+        
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StudentEngaementApp</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+</head>
+<body>
+<h1>STUDENT ENGAGEMENT APPLICATION</h1>
+<div class="container">
+	<form class="form1">
+     <form method="get">
+        <div class="form-group" style="">
+         <label for="Name" class="l1" >Name:</label>
+         <input type="text" class="form-control" name="name" placeholder="Ex:sree" pattern="[a-zA-Z]+$" title="Format:only letters" required="">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Reg No" class="l1" >Reg No:</label>
+         <input type="text" class="form-control" name="reg" placeholder="Ex:BL.EN.U4CSE15000"  
+         pattern="^(BL\.EN\.U4)(CSE|ECE|EEE|MEC)[1-9][0-9]{4}$" title="Format: BL.EN.U4 (CSE|ECE|MEC|EEE) 5 digits starting with 1" required=""> 
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="date" class="l1" >Date Of Birth:</label>
+         <input type="date" class="form-control" name="date" placeholder="Enter yyyy-mm-dd" format="yyyy-mm-dd" min="1995-01-01" max="2010-12-31" required="">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="email" class="l1" >Email:</label>
+         <input type="email" class="form-control" name="email" placeholder="Enter email address" required="">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label class="l1" >Password:</label>
+         <input type="password" class="form-control" name="pwd" placeholder="Enter password" pattern="^[A-Z][a-z]+[0-9]*$" title="Format:Start with capital and use atleast one small letter and any no.of digits" required="">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Phone no" class="l1">Phone no:</label>
+         <input type="text" class="form-control" pattern="(7|8|9)[0-9]{9}$" name="phno" placeholder="Enter 10-digit number" title="Format:Enter 10-digit number" required="">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Phone no" class="l1">Courses:</label>
+         <input type="text" name="course[]" class="form-control" readonly="" placeholder="u can select once u log in">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+        <label for="cou" class="l1" >Branch:</label><br>
+        <label class="l1" style="margin-left:5%"> <input type="radio" name="cou" value="CSE">CSE</label>
+        <label class="l1" style="margin-left:5%"> <input type="radio" name="cou" value="ECE" >ECE</label>
+        <label class="l1" style="margin-left:5%"> <input type="radio" name="cou" value="MEC">MEC</label>
+         <label class="l1" style="margin-left:5%"><input type="radio" name="cou" value="EEE">EEE</label>
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="Phone no" class="l1">ID proof:</label>
+         <input type="file" class="form-control" pattern="" name="idprf" placeholder="" title="Format:Enter 10-digit number" readonly="readonly" value="NULL">
+        </div>
+        <div class="form-group" style="margin-top:-10px">
+         <label for="gender" class="l1">Gender:</label>
+         
+         <label class="l1" style="margin-left:5%"><input type="radio" name="gender" value="male" > male  </label>
+         <label class="l1" style="margin-left:7%"><input type="radio" name="gender" value="female"> female</label>
+        </div>
+    <br>
+	<br>
+    <div style="margin-top:-60px">
+    <button type="submit" class="btn blue" formaction="/signup-store" value="Sign up">Signup</button>
+    </div>
+    
+    </form>
+    <form style="margin-top:-3%;margin-bottom:2%;margin-left:13%">
+    <label style="">Already have an account!!-></label>
+       <button type="submit" formaction="/logi" class="orange" style="">Log in</button>
+    </form>
+  	</form>
+    
+			
+			
+	
+</div>
+</body>
+
+</html>
